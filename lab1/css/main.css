@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Global Overrides
+========================================================================== */
+* {
+ box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   Global Styles
+========================================================================== */
+html {
+	font-size: 16px;
+}
+
+body {
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+/* ==========================================================================
+   Header Styles
+========================================================================== */
+header {
+	background-color: #F7F7F7;
+	padding-bottom:  3.75rem;
+}
+
+h1 {
+	font-family: 'Libre Baskerville', serif;
+	color: #401935;
+	font-size:  3.75rem;
+}
+
+header p {
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1.5rem;
+	color: #222;
+	text-transform: none;
+	font-weight: 400;
+	letter-spacing: 0;
+	padding: 0 6.25rem;
+	line-height: 1.5;
+}
+
+/* ==========================================================================
+   Nav Styles
+========================================================================== */
+.nav-wrapper {
+	background-color: #191919;
+	margin-bottom:  3.75rem;
+}
+
+.nav-wrapper a {
+	color: #5E5E5E;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+nav a {
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	letter-spacing: .08em;
+	padding: 1.25rem 1.875rem;
+	display: inline-block;
+}
+
+.active {
+	color: #fff;
+}
+
+.hamburger {
+	background-color: black;
+	font-size: 1.688rem;
+	padding: 0.625rem 1.25rem;
+	display: none;
+}
+
