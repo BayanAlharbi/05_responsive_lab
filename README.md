@@ -12,42 +12,13 @@
 
 ***
 
-<a name="introduction-rd"></a>
-## Introduction: Responsive Design
 
-Responsive Design is the strategy of making a site that "responds" to the browser and device on which it's being displayed. This means a website is usable, readable, and looks great on any and all screen sizes.
-
-According to the Wikipedia definition:
-
-"Responsive web design (RWD) is a web design approach aimed at crafting sites to provide an optimal viewing experience — easy reading and navigation with a minimum of resizing, panning, and scrolling — across a wide range of devices (from mobile phones to desktop computer monitors)."
-
-### Responsive Design is _**not**_ Device-Specific
-
-A responsive site doesn't just look good on the newest phone, watch, tablet, or mega-screen; it looks good on *any* screen. This might seem impossible, but it's relatively straightforward. All that's required is writing a series of rules, known as media queries, that check the size of the browser/device on which the site is being viewed, and adjust the CSS as needed.
-
-### Media Queries
-
-Media queries were introduced in CSS3. They are conditional style rules for the size of the browser/device rendering the site. 
-
-A media query consists of a media type(like screen) and can contain one or more expressions, which resolve to either true or false.
 ```
 @media not|only mediatype and (expressions) {
     CSS-Code;
 }
 ```
-Let's look at an example.
 
-We already know that if we do something like this:
-
-```css
-p {
-  color: red;
-}
-
-p.blue_text {
-  color: blue;
-}
-```
 
 By default, all p tags will have red text – unless they have the class blue_text, in which case the text will be blue. We can do a similar thing with media queries.
 
@@ -83,35 +54,26 @@ We've seen some problems that can happen if we don't override some of the initia
 
 This ensures that the viewport is the same as the screen, and displays at a natural zoom of 100%.
 
-If you don't include this tag, the browser gets to choose the default viewport width and will not adhere to the correct media query style rules. In other words, a mobile browser might set its viewport width to `1080px` and display the layout meant for a screen that size.
-
-Here's an example of a site that hasn't overridden the viewport: [http://www.tcgplayer.com](http://www.tcgplayer.com)
-
 
 ***
 
 <a name="demo-rd"></a>
-## Demo / Codealong: Responsive Design 
+## Class Work: Responsive Design 
 
-So how can we make more impactful changes to our site using media queries? The `flexbox` approach to layout eliminated the need to use media queries to adjust the grid on your page. But what if you're working on a project with existing code using `float`? And what about adjusting other elements on the page using media queries? It's important to understand all methods when approaching responsive design.
+### Color Scheme
+- General font-size `14px`
+- Album cover background `#401935`
+- footer `#1B0B17`
+- text paragraph `#873672`
+- header tags `font-family: 'Libre Baskerville', serif;`
 
-Consider this [HTML](codealong/albums/index.html) and [CSS](codealong/albums/css/main-1.css), which renders like this on a large screen:
+
+Consider this [HTML](lab1/index.html) and [CSS](lab1/css/main.css), which renders like this on a large screen:
 ![albums-1](assets/albums-1.png)
 
-And like this on a small screen:
-![albums-1-400](assets/albums-1-400.png)
 
-The issues with the layout in the smaller screen rendering are evident, from the top of the page to the bottom:
-- The `nav` takes up too much vertical space.
-- The title and description are too large.
-- The 6-column layout is too narrow for the content.
 
-It's important that we work "big to small" – meaning we address the large layout concerns first, then work through the details of adjusting sizing. We also have to keep in mind that there may be some breakpoints in between a common desktop size and a common mobile size. For now, let's work on adding styles for a small screen size at `400px`.
-
-One way to approach media queries is to start by adding in styles you want for the smaller size *at the end of your CSS document*. These styles will overwrite the rules above! Compare this [new CSS](codealong/albums/css/main-2.css) to the [previous CSS](codealong/albums/css/main-1.css) and see how it renders on a large screen:
-![albums-2](assets/albums-2.png)
-
-All content on the page is aligned in a single column, whether viewed on a small or large screen width. Now we need to specify **at which width** we want these styles to be applied. We can do this by adding in media queries to our [updated CSS](codealong/albums/css/main-3.css).
+All content on the page is aligned in a single column, whether viewed on a small or large screen width. Now we need to specify **at which width** we want these styles to be applied. We can do this by adding in media queries to our 
 
 Here are the four different layouts as we reduce the screen size:
 ![albums-1](assets/albums-1.png)
@@ -119,7 +81,7 @@ Here are the four different layouts as we reduce the screen size:
 ![albums-3-sm](assets/albums-3-sm.png)
 ![albums-3-xs](assets/albums-3-xs.png)
 
-Now our layout looks great on all screen sizes! The final touch is to adjust the copy on the page. Here's the [final CSS](codealong/albums/css/main-4.css) and how it renders on a small screen:
+Now our layout looks great on all screen sizes! The final touch is to adjust the copy on the page. Here's the final look and how it renders on a small screen:
 ![albums-4](assets/albums-4.png)
 
 You can access all of the code [here](codealong/albums).
@@ -150,7 +112,7 @@ Dream Team Basic
 Dream Team Challenge
 ![Dream Team Challenge](assets/dream-team-challenge.png)
 
-Finish early? Start [adding media queries to the code](independent-practice/starter-code) to realize your wireframe. You can check your work later with the [solution code](independent-practice/solution-code).
+
 
 ***
 
